@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Desha-Saeed/snap-website)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Desha-Saeed/snap-website]
+- Live Site URL: [https://snap-website-demo-47wnvy6yz-desha-saeed.vercel.app/]
 
 ## My process
 
