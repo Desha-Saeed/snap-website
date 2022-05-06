@@ -45,7 +45,7 @@ Users should be able to:
 ### What I learned
 
 I learned more about tailwindcss with this project also it was my first time trying the mobile-first approach
-```
+
 
 
 
