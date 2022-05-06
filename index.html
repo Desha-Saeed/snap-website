@@ -27,7 +27,7 @@
       }
     </style>
   </head>
-  <body class="bg-almostWhite">
+  <body class="bg-white">
     <!-- Navbar -->
     <!-- Navbar Container -->
     <nav
@@ -39,10 +39,11 @@
          <!-- side nav container -->
          <div
          id="sidenav"
-         class="fixed hidden flex flex-col z-10 h-[100%] w-[250px] top-0 right-0 bg-white text-mediumGray transition overflow-x-hidden pt-15 md:hidden"
+         class="fixed  flex flex-col z-10 h-[100%] w-[0] top-0 right-0 bg-white text-mediumGray overflow-x-hidden duration-[0.5s] pt-15 md:hidden"
        >
          <!-- side close menu -->
          <img
+          id="close-menu"
            src="images/icon-close-menu.svg"
            alt="close menu"
            class="self-end px-5 py-4 cursor-pointer"
@@ -50,15 +51,15 @@
 
          <!-- side menu links -->
          <ul class="px-5 py-4">
-           <li class="flex place-items-center py-3 relative ">
+           <li id = 'features-mobile'class="flex place-items-center py-3 relative ">
              <a href="#" class="hover:text-almostBlack">Features</a>
              <img
                src="images/icon-arrow-down.svg"
                alt="icon-arrow-down"
-               class="p-2 cursor-pointer"
+               class="p-2 cursor-pointer arrow-down"
              />
              <!-- side Features dropdown content container -->
-             <div id = "features-dropjs"class="absolute top-10 left-3 h-[200px] w-full bg-white text-mediumGray">
+             <div id = "features-mobile-container"class="absolute hidden top-10 left-3 h-[200px] w-full bg-white text-mediumGray">
                <!-- side dropdown content 1 -->
                <div class="flex place-items center py-3">
                    <img class="mr-3 p-1" src="images/icon-todo.svg" alt="todos">
@@ -87,22 +88,22 @@
              </div>
            </li>
            <!--  Company dropdown -->
-           <li id = "company-dropjs" class="flex relative place-items-center py-3 mt-[175px]">
+           <li id = "company-mobile" class="flex relative place-items-center py-3 mt-[0]">
              <a href="#" class="hover:text-almostBlack">Company</a>
              <img
                src="images/icon-arrow-down.svg"
                alt="icon-arrow-down"
-               class="p-2 cursor-pointer"
+               class="p-2 cursor-pointer arrow-down"
              />
              <!-- Company dropdown menu container -->
-               <div class="absolute  top-10 left-3 h-[130px] w-full bg-white text-mediumGray">
+               <div id="company-mobile-container" class="absolute hidden  top-10 left-3 w-full bg-white text-mediumGray">
                    <a class="block p-2 hover:text-almostBlack " href="#">History</a>
                    <a class="block p-2 hover:text-almostBlack" href="#">Our Team</a>
                    <a class="block p-2 hover:text-almostBlack" href="#">Blog</a>
                </div>
 
            </li>
-           <li class="py-3 mt-[120px]"><a href="#" class="hover:text-almostBlack">Careers</a></li>
+           <li id = "careers-link" class="py-3 mt-[0]"><a href="#" class="hover:text-almostBlack">Careers</a></li>
            <li class="py-3"><a href="#" class="hover:text-almostBlack">About</a></li>
          </ul>
          <!-- Sidenav buttons -->
@@ -122,7 +123,7 @@
         class="hidden md:flex justify-start items-center flex-1 mx-7 relative"
       >
         <li
-          class="relative px-5 flex place-items-center hover:text-almostBlack"
+          id = "feature-desktop" class="relative px-5 flex place-items-center hover:text-almostBlack"
         >
           <a href="#" >Features</a>
           <img
@@ -130,9 +131,9 @@
             src="images/icon-arrow-down.svg"
             alt="arrow down"
           />
-          <!-- dropdown content -->
+          <!-- dropdown content container -->
           <div
-            class="bg-white shadow-lg rounded-lg flex  flex-col absolute top-10 left-[-26%] px-3 w-[140px] h-[140px]"
+            id = 'features-desktop-container' class="hidden bg-white shadow-lg rounded-lg flex flex-col absolute top-10 left-[-26%] px-3 w-[140px] h-[140px] "
           >
             <!-- dropdown item 1 -->
             <div class="flex place-items-center mt-4 py-1 px-4 text-mediumGray">
@@ -158,14 +159,14 @@
         </li>
 
         <!-- Company dropdown -->
-        <li class="px-5 relative flex place-items-center ">
+        <li id = "company-desktop"class="px-5 relative flex place-items-center ">
           <a href="#" class="hover:text-almostBlack">Company</a>
           <img
             class="p-1 mt-1 self-center cursor-pointer"
             src="images/icon-arrow-down.svg"
             alt="arrow down"
           />
-          <div  class="bg-white shadow-xl rounded-lg flex flex-col absolute py-4 px-4 top-10 w-[115px] h-[100px]">
+          <div id="company-desktop-container" class="bg-white shadow-xl rounded-lg hidden flex flex-col absolute py-4 px-4 top-10 w-[115px] h-[100px]">
             <a href="#" class="  text-xs font-medium text-left px-2 mt-1 hover:text-almostBlack">History</a>
             <a href="#" class="  text-xs font-medium text-left px-2 mt-2 hover:text-almostBlack">Our Team</a>
             <a href="#" class="  text-xs font-medium text-left px-2 mt-2 hover:text-almostBlack">Blog</a>
@@ -191,6 +192,7 @@
       </div>
       <!-- Mobile menu -->
       <img
+        id="mobile-menu"
         class="w-[40px] cursor-pointer md:hidden"
         src="images/icon-menu.svg"
         alt="menu"
@@ -200,7 +202,8 @@
 
     <!-- Main Section -->
     <main
-      class="container px-10 mx-auto py-4 flex flex-col place-items-center md:flex-row gap-20"
+      id="main"
+      class="container px-10 mx-auto py-4  flex flex-col place-items-center transition-[marginRight] duration-[.5s] md:flex-row gap-20"
     >
       <!-- main image mobile-->
       <img
